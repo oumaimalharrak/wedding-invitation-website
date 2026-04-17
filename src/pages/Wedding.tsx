@@ -8,7 +8,7 @@ import { Rsvp } from "@/components/wedding/Rsvp";
 import { Footer } from "@/components/wedding/Footer";
 
 const Wedding = () => (
-  <div className="bg-background">
+  <div className="bg-background animate-fade-in">
     <Nav />
     <Hero />
     <Story />
