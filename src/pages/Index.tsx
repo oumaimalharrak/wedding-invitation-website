@@ -1,19 +1,68 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Volume2, VolumeX } from "lucide-react";
 import waxSeal from "@/assets/wax-seal.jpg";
+import waxCrackSfx from "@/assets/sfx/wax-crack.wav";
+import paperRustleSfx from "@/assets/sfx/paper-rustle.wav";
 
 type Stage = "idle" | "opening" | "leaving";
+
+const MUTE_KEY = "tdy:muted";
 
 const Index = () => {
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("idle");
+  const [muted, setMuted] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return window.localStorage.getItem(MUTE_KEY) === "1";
+  });
+
+  const crackRef = useRef<HTMLAudioElement | null>(null);
+  const rustleRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const crack = new Audio(waxCrackSfx);
+    const rustle = new Audio(paperRustleSfx);
+    crack.preload = "auto";
+    rustle.preload = "auto";
+    crack.volume = 0.6;
+    rustle.volume = 0.45;
+    crackRef.current = crack;
+    rustleRef.current = rustle;
+    return () => {
+      crack.pause();
+      rustle.pause();
+    };
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem(MUTE_KEY, muted ? "1" : "0");
+  }, [muted]);
+
+  const playSfx = (el: HTMLAudioElement | null, delay = 0) => {
+    if (!el || muted) return;
+    window.setTimeout(() => {
+      try {
+        el.currentTime = 0;
+        void el.play().catch(() => {});
+      } catch {
+        /* noop */
+      }
+    }, delay);
+  };
 
   const handleOpen = () => {
     if (stage !== "idle") return;
     setStage("opening");
-    // Schedule the next stages directly so re-renders don't cancel them.
+    playSfx(crackRef.current, 0);
+    playSfx(rustleRef.current, 600);
     window.setTimeout(() => setStage("leaving"), 2200);
     window.setTimeout(() => navigate("/boda"), 3000);
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setMuted((m) => !m);
   };
 
   return (
@@ -96,6 +145,17 @@ const Index = () => {
       >
         Toca el sello para abrir
       </p>
+
+      {/* Mute toggle */}
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={muted ? "Activar sonido" : "Silenciar sonido"}
+        aria-pressed={muted}
+        className="absolute top-5 right-5 md:top-6 md:right-8 z-10 grid place-items-center h-9 w-9 rounded-full bg-background/60 backdrop-blur text-foreground/70 hover:text-foreground hover:bg-background/80 transition-colors"
+      >
+        {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+      </button>
     </main>
   );
 };
