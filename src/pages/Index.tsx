@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import waxSeal from "@/assets/wax-seal.jpg";
 
@@ -11,18 +11,10 @@ const Index = () => {
   const handleOpen = () => {
     if (stage !== "idle") return;
     setStage("opening");
+    // Schedule the next stages directly so re-renders don't cancel them.
+    window.setTimeout(() => setStage("leaving"), 2200);
+    window.setTimeout(() => navigate("/boda"), 3000);
   };
-
-  // After the envelope animation completes, navigate to /boda
-  useEffect(() => {
-    if (stage !== "opening") return;
-    const t1 = setTimeout(() => setStage("leaving"), 2200);
-    const t2 = setTimeout(() => navigate("/boda"), 3000);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-    };
-  }, [stage, navigate]);
 
   return (
     <main
