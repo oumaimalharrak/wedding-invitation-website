@@ -1,0 +1,23 @@
+import { Nav } from "@/components/wedding/Nav";
+import { Hero } from "@/components/wedding/Hero";
+import { Story } from "@/components/wedding/Story";
+import { Schedule } from "@/components/wedding/Schedule";
+import { Venue } from "@/components/wedding/Venue";
+import { Gallery } from "@/components/wedding/Gallery";
+import { Rsvp } from "@/components/wedding/Rsvp";
+import { Footer } from "@/components/wedding/Footer";
+
+const Wedding = () => (
+  <div className="bg-background">
+    <Nav />
+    <Hero />
+    <Story />
+    <Schedule />
+    <Venue />
+    <Gallery />
+    <Rsvp />
+    <Footer />
+  </div>
+);
+
+export default Wedding;
