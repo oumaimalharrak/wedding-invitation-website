@@ -145,6 +145,17 @@ const Index = () => {
       >
         Toca el sello para abrir
       </p>
+
+      {/* Mute toggle */}
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={muted ? "Activar sonido" : "Silenciar sonido"}
+        aria-pressed={muted}
+        className="absolute top-5 right-5 md:top-6 md:right-8 z-10 grid place-items-center h-9 w-9 rounded-full bg-background/60 backdrop-blur text-foreground/70 hover:text-foreground hover:bg-background/80 transition-colors"
+      >
+        {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+      </button>
     </main>
   );
 };
