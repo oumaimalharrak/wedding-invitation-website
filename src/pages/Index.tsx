@@ -1,16 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import waxSeal from "@/assets/wax-seal.jpg";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const handleSkip = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Intro skip — placeholder for future main site route
+    console.log("Skip intro");
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="relative h-screen w-screen overflow-hidden bg-background">
+      {/* Hero background image */}
+      <img
+        src={waxSeal}
+        alt="Wax seal with E & D monogram on cream envelope"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+
+      {/* Centered branding overlay */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <p className="font-serif-display italic text-primary text-lg md:text-xl tracking-wide translate-y-16 md:translate-y-24">
+          The Digital Yes
+        </p>
+      </div>
+
+      {/* Skip link */}
+      <a
+        href="#main"
+        onClick={handleSkip}
+        className="absolute bottom-6 right-6 md:bottom-8 md:right-10 text-[10px] md:text-xs tracking-[0.3em] text-foreground/70 hover:text-foreground transition-colors"
+      >
+        SALTAR
+      </a>
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
