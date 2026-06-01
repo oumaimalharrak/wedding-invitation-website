@@ -74,14 +74,14 @@ const Index = () => {
       {/* Envelope back (paper) — base layer */}
       <img
         src={waxSeal}
-        alt="Sello de cera con monograma E & D sobre sobre crema"
+        alt="Wax seal with O & S monogram on a cream envelope"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Wax seal overlay — clickable, pops off on open */}
       <button
         type="button"
-        aria-label="Abrir invitación"
+        aria-label="Open invitation"
         onClick={handleOpen}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group"
       >
@@ -134,7 +134,7 @@ const Index = () => {
           stage === "idle" ? "opacity-100" : "opacity-0"
         }`}
       >
-        SALTAR
+        SKIP
       </button>
 
       {/* Hint */}
@@ -143,14 +143,14 @@ const Index = () => {
           stage === "idle" ? "opacity-100" : "opacity-0"
         }`}
       >
-        Toca el sello para abrir
+        Tap the seal to open
       </p>
 
       {/* Mute toggle */}
       <button
         type="button"
         onClick={toggleMute}
-        aria-label={muted ? "Activar sonido" : "Silenciar sonido"}
+        aria-label={muted ? "Enable sound" : "Mute sound"}
         aria-pressed={muted}
         className="absolute top-5 right-5 md:top-6 md:right-8 z-10 grid place-items-center h-9 w-9 rounded-full bg-background/60 backdrop-blur text-foreground/70 hover:text-foreground hover:bg-background/80 transition-colors"
       >

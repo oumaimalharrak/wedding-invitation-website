@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#historia", label: "Historia" },
-  { href: "#agenda", label: "Agenda" },
-  { href: "#lugar", label: "Lugar" },
-  { href: "#galeria", label: "Galería" },
-  { href: "#confirmar", label: "Confirmar" },
+  { href: "#home", label: "Home" },
+  { href: "#story", label: "Celebration" },
+  { href: "#schedule", label: "Schedule" },
+  { href: "#venue", label: "Venue" },
+  { href: "#gallery", label: "Gallery" },
 ];
 
 export const Nav = () => {
@@ -26,8 +25,8 @@ export const Nav = () => {
       }`}
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#inicio" className="font-serif-display italic text-xl text-primary">
-          E & D
+        <a href="#home" className="font-serif-display italic text-xl text-primary">
+          O & S
         </a>
         <ul className="hidden md:flex gap-8">
           {links.map((l) => (

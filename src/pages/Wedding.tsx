@@ -4,7 +4,6 @@ import { Story } from "@/components/wedding/Story";
 import { Schedule } from "@/components/wedding/Schedule";
 import { Venue } from "@/components/wedding/Venue";
 import { Gallery } from "@/components/wedding/Gallery";
-import { Rsvp } from "@/components/wedding/Rsvp";
 import { Footer } from "@/components/wedding/Footer";
 
 const Wedding = () => (
@@ -15,7 +14,6 @@ const Wedding = () => (
     <Schedule />
     <Venue />
     <Gallery />
-    <Rsvp />
     <Footer />
   </div>
 );
