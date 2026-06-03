@@ -6,75 +6,93 @@
 
 @layer base {
   :root {
-    /* Wedding intro design tokens — soft cream + dusty rose */
-    --background: 40 38% 96%;
-    --foreground: 15 25% 28%;
+    /* Main Background: Clean off-white (#f3f3f5) */
+    --background: 240 11% 96%;
+    
+    /* FIX: Darkened the foreground significantly to #134e63 for maximum text clarity */
+    --foreground: 197 68% 18%; 
 
-    --card: 40 38% 96%;
-    --card-foreground: 15 25% 28%;
+    --card: 240 11% 96%;
+    --card-foreground: 197 68% 18%;
 
-    --popover: 40 38% 96%;
-    --popover-foreground: 15 25% 28%;
+    --popover: 240 11% 96%;
+    --popover-foreground: 197 68% 18%;
 
-    --primary: 8 35% 58%;
-    --primary-foreground: 40 38% 96%;
+    /* Brand Accent / Primary: Vibrant Slate Blue (#2596be) */
+    --primary: 197 67% 45%;
+    --primary-foreground: 240 11% 96%;
 
-    --secondary: 30 25% 88%;
-    --secondary-foreground: 15 25% 28%;
+    /* Secondary: Soft Ice Blue (#9bc3d3) */
+    --secondary: 197 41% 72%;
+    --secondary-foreground: 197 68% 18%;
 
-    --muted: 35 20% 90%;
-    --muted-foreground: 15 15% 45%;
+    /* FIX: Changed muted-foreground from a weak gray to your deep slate blue color. */
+    /* This makes sure the date, location, and counter labels stay sharp and visible! */
+    --muted: 8 13% 85%;
+    --muted-foreground: 197 68% 22%; 
 
-    --accent: 8 35% 78%;
-    --accent-foreground: 15 25% 28%;
+    /* Accent: Shifting to your soft blue for highlights */
+    --accent: 197 41% 72%;
+    --accent-foreground: 197 68% 18%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 40 38% 96%;
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 240 11% 96%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 8 35% 58%;
+    /* Borders & UI Lines */
+    --border: 197 20% 85%;
+    --input: 197 20% 85%;
+    --ring: 197 67% 45%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 40 38% 96%;
-    --sidebar-foreground: 15 25% 28%;
-    --sidebar-primary: 8 35% 58%;
-    --sidebar-primary-foreground: 40 38% 96%;
-    --sidebar-accent: 30 25% 88%;
-    --sidebar-accent-foreground: 15 25% 28%;
-    --sidebar-border: 30 20% 85%;
-    --sidebar-ring: 8 35% 58%;
+    /* Sidebar matching the theme */
+    --sidebar-background: 240 11% 96%;
+    --sidebar-foreground: 197 68% 18%;
+    --sidebar-primary: 197 67% 45%;
+    --sidebar-primary-foreground: 240 11% 96%;
+    --sidebar-accent: 197 41% 72%;
+    --sidebar-accent-foreground: 197 68% 18%;
+    --sidebar-border: 197 20% 85%;
+    --sidebar-ring: 197 67% 45%;
   }
 
   .dark {
-    --background: 15 15% 12%;
-    --foreground: 40 38% 96%;
-    --card: 15 15% 12%;
-    --card-foreground: 40 38% 96%;
-    --popover: 15 15% 12%;
-    --popover-foreground: 40 38% 96%;
-    --primary: 8 35% 68%;
-    --primary-foreground: 15 15% 12%;
-    --secondary: 15 10% 20%;
-    --secondary-foreground: 40 38% 96%;
-    --muted: 15 10% 20%;
-    --muted-foreground: 40 15% 70%;
-    --accent: 15 10% 20%;
-    --accent-foreground: 40 38% 96%;
-    --destructive: 0 60% 40%;
-    --destructive-foreground: 40 38% 96%;
-    --border: 15 10% 20%;
-    --input: 15 10% 20%;
-    --ring: 8 35% 68%;
-    --sidebar-background: 15 15% 12%;
-    --sidebar-foreground: 40 38% 96%;
-    --sidebar-primary: 8 35% 68%;
-    --sidebar-primary-foreground: 15 15% 12%;
-    --sidebar-accent: 15 10% 20%;
-    --sidebar-accent-foreground: 40 38% 96%;
-    --sidebar-border: 15 10% 20%;
-    --sidebar-ring: 8 35% 68%;
+    --background: 197 65% 10%;
+    --foreground: 240 11% 96%;
+    
+    --card: 197 65% 10%;
+    --card-foreground: 240 11% 96%;
+    
+    --popover: 197 65% 10%;
+    --popover-foreground: 240 11% 96%;
+    
+    --primary: 197 67% 55%;
+    --primary-foreground: 197 65% 10%;
+    
+    --secondary: 197 30% 20%;
+    --secondary-foreground: 240 11% 96%;
+    
+    --muted: 197 30% 20%;
+    --muted-foreground: 197 20% 70%;
+    
+    --accent: 197 30% 20%;
+    --accent-foreground: 240 11% 96%;
+    
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 240 11% 96%;
+    
+    --border: 197 30% 20%;
+    --input: 197 30% 20%;
+    --ring: 197 67% 55%;
+    
+    --sidebar-background: 197 65% 10%;
+    --sidebar-foreground: 240 11% 96%;
+    --sidebar-primary: 197 67% 55%;
+    --sidebar-primary-foreground: 197 65% 10%;
+    --sidebar-accent: 197 30% 20%;
+    --sidebar-accent-foreground: 240 11% 96%;
+    --sidebar-border: 197 30% 20%;
+    --sidebar-ring: 197 67% 55%;
   }
 }
 

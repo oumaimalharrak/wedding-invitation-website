@@ -22,20 +22,20 @@ export const Countdown = ({ target }: CountdownProps) => {
   }, [target]);
 
   const items = [
-    { label: "Días", value: t.d },
-    { label: "Horas", value: t.h },
+    { label: "Days", value: t.d },
+    { label: "hours", value: t.h },
     { label: "Min", value: t.m },
-    { label: "Seg", value: t.s },
+    { label: "Sec", value: t.s },
   ];
 
   return (
     <div className="flex justify-center gap-6 md:gap-12">
       {items.map((it) => (
         <div key={it.label} className="text-center">
-          <div className="font-serif-display text-4xl md:text-5xl text-foreground">
+          <div className="font-serif-display text-4xl md:text-5xl text-foreground" style={{ color: "#ffffff" }}>
             {String(it.value).padStart(2, "0")}
           </div>
-          <div className="mt-1 text-[10px] md:text-xs tracking-[0.25em] uppercase text-muted-foreground">
+          <div className="mt-1 text-[10px] md:text-xs tracking-[0.25em] uppercase text-muted-foreground" style={{ color: "#ffffff" }}>
             {it.label}
           </div>
         </div>
