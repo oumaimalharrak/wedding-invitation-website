@@ -15,21 +15,21 @@ const Index = () => {
   };
 
   const handleVideoComplete = () => {
-    // 1. First trigger the fade to light blue
     setStage("transition_to_blue");
-    
-    // 2. Allow time for the light blue transition to completely cover the screen smoothly
+
+    // Navigate only after the blue overlay has fully faded in (match duration-1000 = 1000ms)
+    // Add a small buffer so the overlay is truly opaque before route change
     setTimeout(() => {
       setStage("leaving");
       navigate("/boda");
-    }, 1200); // 1.2 seconds of smooth blue screen display
+    }, 1100);
   };
 
   return (
     <main className="relative h-screen w-screen overflow-hidden bg-black">
-      
+
       {/* 1. Base Layer: Main Cover Image */}
-      <div 
+      <div
         onClick={handleOpen}
         className={`absolute inset-0 cursor-pointer transition-opacity duration-1000 ${
           stage === "idle" ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -45,13 +45,15 @@ const Index = () => {
         </p>
       </div>
 
-      {/* 2. Immersive Video Layer: Displays slowly (1500ms transition) */}
+      {/* 2. Video Layer — stays visible during transition_to_blue so the overlay fades over it */}
       <div
         className={`absolute inset-0 flex items-center justify-center bg-black transition-opacity duration-[1500ms] ${
-          stage === "playing_video" ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          stage === "playing_video" || stage === "transition_to_blue"
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
-        {stage !== "idle" && stage !== "transition_to_blue" && stage !== "leaving" && (
+        {stage !== "idle" && stage !== "leaving" && (
           <video
             src={introVideo}
             autoPlay
@@ -62,12 +64,12 @@ const Index = () => {
         )}
       </div>
 
-      {/* 3. Smooth Light Blue Transition Layer (#9bc3d3) */}
+      {/* 3. Blue Envelope Fade Overlay — fades IN over the video, then we navigate */}
       <div
         className={`absolute inset-0 transition-opacity duration-1000 z-50 pointer-events-none ${
           stage === "transition_to_blue" || stage === "leaving" ? "opacity-100" : "opacity-0"
         }`}
-        style={{ backgroundColor: "#9bc3d3" }} // Using your new soft ice blue color palette value
+        style={{ backgroundColor: "#9bc3d3" }}
       />
 
     </main>
