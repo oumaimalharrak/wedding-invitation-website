@@ -100,6 +100,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
+        "fade-in-slow": "fade-in 2s ease-in forwards",
         "fade-out": "fade-out 0.5s ease-out forwards",
         "seal-crack": "seal-crack 1.2s cubic-bezier(0.6, 0, 0.4, 1) forwards",
         "flap-open": "flap-open 1.4s cubic-bezier(0.7, 0, 0.3, 1) forwards",

@@ -1,4 +1,5 @@
 import heroArch from "@/assets/arch.jpg";
+import topImage from "@/assets/1.png";
 import { Countdown } from "./Countdown";
 
 const WEDDING_DATE = new Date("2026-07-31T17:00:00");
@@ -15,6 +16,7 @@ export const Hero = () => (
     <div className="absolute inset-0 bg-accent-foreground/40" />
 
     <div className="relative z-10 text-center px-6">
+      <img src={topImage} alt="Decoration" className="mx-auto mb-4 w-40 md:w-56" />
       <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase text-primary mb-6" style={{ color: "#ffffff" }}>
         We're Getting Married
       </p>

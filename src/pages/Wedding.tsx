@@ -6,8 +6,12 @@ import { Venue } from "@/components/wedding/Venue";
 import { Gallery } from "@/components/wedding/Gallery";
 import { Footer } from "@/components/wedding/Footer";
 
-const Wedding = () => (
-  <div className="bg-background animate-fade-in">
+interface WeddingProps {
+  fadeIn?: boolean;
+}
+
+const Wedding = ({ fadeIn = true }: WeddingProps) => (
+  <div className={`bg-background ${fadeIn ? "animate-fade-in-slow" : ""}`}>
     <Nav />
     <Hero />
     <Story />
