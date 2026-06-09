@@ -11,7 +11,7 @@ export const Story = () => (
           <img
             src={storyImg}
             alt="Couple's hands with a gold ring on cream linen"
-            className="w-full h-[480px] object-cover"
+            className="w-full h-[460px] object-cover"
             loading="lazy"
             width={1280}
             height={1280}
