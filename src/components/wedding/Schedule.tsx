@@ -1,47 +1,47 @@
 import { SectionTitle } from "./SectionTitle";
-import { Church, Coffee, Flag, UtensilsCrossed, Music, Sparkles, Gift } from "lucide-react";
+import { Newspaper, Coffee, Flag, UtensilsCrossed, Music, Sparkles, Gift } from "lucide-react";
 
 const events = [
   {
     time: "",
-    title: "Guest Arrival",
-    desc: "We warmly welcome our family and friends to join us for this special celebration.",
+    title: "Arrivée des invités",
+    desc: "Nous accueillons chaleureusement notre famille et nos amis pour cette célébration spéciale.",
     Icon: Flag,
   },
   {
     time: "",
-    title: "Traditional Wedding Ceremony",
-    desc: "A beautiful moment as we begin our journey together surrounded by our loved ones.",
-    Icon: Church,
+    title: "Cérémonie de mariage traditionnelle",
+    desc: "Un moment magnifique où nous commençons notre vie à deux, entourés de nos proches.",
+    Icon: Newspaper,
   },
   {
     time: "",
-    title: "Moroccan Tea & Sweets",
-    desc: "Enjoy traditional Moroccan tea, sweets, and delightful treats.",
+    title: "Thé Marocain et Douceurs",
+    desc: "Savourez un thé marocain traditionnel, des douceurs et de délicieuses friandises.",
     Icon: Coffee,
   },
   {
     time: "",
-    title: "Amariya Entrance",
-    desc: "Join us for one of the most cherished moments of the evening as the celebration continues.",
+    title: "Entrée de l'Amariya",
+    desc: "Rejoignez-nous pour l'un des moments les plus précieux de la soirée, alors que la célébration continue.",
     Icon: Sparkles,
   },
   {
     time: "",
-    title: "Dinner Service",
-    desc: "A festive dinner shared with family and friends.",
+    title: "Dîner",
+    desc: "Un dîner festif partagé avec la famille et les amis.",
     Icon: UtensilsCrossed,
   },
   {
     time: "",
-    title: "Music & Dancing",
-    desc: "An evening filled with joy, music, and celebration.",
+    title: "Musique et Danse",
+    desc: "Une soirée remplie de joie, de musique et de festivités.",
     Icon: Music,
   },
   {
     time: "",
-    title: "White Dress & Cake Cutting",
-    desc: "A special moment to mark the beginning of our new chapter together.",
+    title: "Robe Blanche",
+    desc: "Un moment spécial pour marquer le début de notre nouveau chapitre ensemble.",
     Icon: Gift,
   },
 ];
@@ -54,7 +54,7 @@ export const Schedule = () => {
   return (
     <section id="schedule" className="py-24 md:py-32 px-6 bg-secondary/40">
       <div className="max-w-3xl mx-auto">
-        <SectionTitle eyebrow="The Day" title="Schedule" />
+        <SectionTitle eyebrow="Le Jour" title="Programme" />
 
         <ol className="relative border-l border-primary/30 ml-6 md:ml-12 space-y-12">
           {uniqueEvents.map(({ time, title, desc, Icon }) => (

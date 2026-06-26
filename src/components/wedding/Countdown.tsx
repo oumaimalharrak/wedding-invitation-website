@@ -22,8 +22,8 @@ export const Countdown = ({ target }: CountdownProps) => {
   }, [target]);
 
   const items = [
-    { label: "Days", value: t.d },
-    { label: "hours", value: t.h },
+    { label: "Jours", value: t.d },
+    { label: "Heures", value: t.h },
     { label: "Min", value: t.m },
     { label: "Sec", value: t.s },
   ];

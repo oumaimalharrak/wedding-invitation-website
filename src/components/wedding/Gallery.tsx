@@ -5,16 +5,16 @@ import g4 from "@/assets/gallery-4.jpg";
 import { SectionTitle } from "./SectionTitle";
 
 const images = [
-  { src: g1, alt: "Ceremony aisle with rose petals", span: "md:row-span-2" },
-  { src: g2, alt: "Banquet table with roses and candles" },
-  { src: g3, alt: "Bridal bouquet with peonies and roses" },
-  { src: g4, alt: "Stone estate at sunset with lights", span: "md:col-span-2" },
+  { src: g1, alt: "Allée de cérémonie avec des pétales de roses", span: "md:row-span-2" },
+  { src: g2, alt: "Table de banquet avec roses et bougies" },
+  { src: g3, alt: "Bouquet de mariée avec pivoines et roses" },
+  { src: g4, alt: "Domaine en pierre au coucher du soleil avec des lumières", span: "md:col-span-2" },
 ];
 
 export const Gallery = () => (
   <section id="gallery" className="py-24 md:py-32 px-6 bg-background">
     <div className="max-w-6xl mx-auto">
-      <SectionTitle eyebrow="Memories" title="Gallery" />
+      <SectionTitle eyebrow="Souvenirs" title="Galerie" />
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 auto-rows-[220px] md:auto-rows-[280px]">
         {images.map((img, i) => (

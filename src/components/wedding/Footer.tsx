@@ -7,7 +7,7 @@ export const Footer = () => (
       31 · 07 · 2026
     </p>
     <p className="mt-8 text-xs text-muted-foreground/70">
-      Made with love
+      Fait avec amour
     </p>
   </footer>
 );
