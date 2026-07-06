@@ -26,7 +26,7 @@ export const Hero = () => (
       <p className="mt-6 font-serif-display italic text-xl md:text-2xl text-muted-foreground" style={{ color: "#ffffff" }}>
         31 · Juillet · 2026  ·  Maison Islane, Tanger
       </p>
-
+      <p className="mt-6 font-serif-display italic text-xl md:text-4xl text-muted-foreground" style={{ color: "#ffffff" }}>Accueil des invités dès 19h</p>
       <div className="">
         <Countdown target={WEDDING_DATE} />
       </div>

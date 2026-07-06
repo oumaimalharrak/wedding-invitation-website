@@ -4,7 +4,7 @@ import { Newspaper, Coffee, Flag, UtensilsCrossed, Music, Sparkles, Gift } from 
 const events = [
   {
     time: "",
-    title: "Arrivée des invités",
+    title: "Arrivée des invités à 19h",
     desc: "Nous accueillons chaleureusement notre famille et nos amis pour cette célébration spéciale.",
     Icon: Flag,
   },
