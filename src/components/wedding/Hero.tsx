@@ -1,6 +1,13 @@
 import heroArch from "@/assets/arch.jpg";
 import topImage from "@/assets/1.png";
 import { Countdown } from "./Countdown";
+import { ChevronDown } from "lucide-react";
+
+const scrollToNext = () => {
+  document.getElementById("story")?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
 
 const WEDDING_DATE = new Date("2026-07-31T17:00:00");
 
@@ -31,5 +38,20 @@ export const Hero = () => (
         <Countdown target={WEDDING_DATE} />
       </div>
     </div>
+   <div className="absolute inset-x-0 bottom-8 z-20 flex justify-center">
+  <button
+    onClick={scrollToNext}
+    aria-label="Découvrir la suite"
+    className="flex flex-col items-center gap-2 text-white animate-bounce [animation-duration:2.5s]"
+  >
+    <span className="text-xs uppercase tracking-[0.3em]">
+      Découvrir
+    </span>
+
+    <div className="rounded-full border border-white/40 bg-white/10 p-3 backdrop-blur-md">
+      <ChevronDown className="h-6 w-6" />
+    </div>
+  </button>
+</div>
   </section>
 );
