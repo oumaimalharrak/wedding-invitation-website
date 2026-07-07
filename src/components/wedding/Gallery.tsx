@@ -1,4 +1,4 @@
-import g1 from "@/assets/gallery-1.jpeg";
+import g1 from "@/assets/gallery-1-1.jpeg";
 import g2 from "@/assets/gallery-2.jpeg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
