@@ -31,7 +31,7 @@ export const Venue = () => (
           </div>
           <Button asChild variant="outline" className="rounded-none border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground tracking-[0.2em] text-xs">
             <a
-              href="https://maps.app.goo.gl/HCbcaijuJeHjoP2J8"
+              href="https://maps.app.goo.gl/cBys7RXaJUcJatRV9"
               target="_blank"
               rel="noreferrer"
             >
