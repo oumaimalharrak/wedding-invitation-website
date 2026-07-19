@@ -11,7 +11,7 @@ export const Venue = () => (
         <div className="overflow-hidden rounded-sm border border-border">
           <iframe
             title="Localisation de Maison Islane"
-            src="https://www.google.com/maps?q=35.755153,-5.7997546&hl=en&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d809.3818613538695!2d-5.7969851!3d35.762418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b81004bc4e189%3A0x9ab28a4645c09e10!2z2YLYp9i52Kkg2KPZgdix2KfYrQ!5e0!3m2!1sfr!2sma!4v1784421378318!5m2!1sfr!2sma" 
             className="w-full h-[420px]"
             loading="lazy"
           />
